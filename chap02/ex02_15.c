@@ -1,17 +1,20 @@
 #include <stdio.h>
 
 void hanoi(int n, int start, int work, int target);
-void main() {
+void main()
+{
 	hanoi(3, 'A', 'B', 'C');
 	getchar();
 }
 
-void hanoi(int n, int start, int work, int target) {
+void hanoi(int n, int start, int work, int target)
+{
 	if (n == 1)
-		printf(" %c¿¡¼­ ¿ø¹İ %d¸¦(À») %c·Î ¿Å±è \n", start, n, target);
-	else {
+		printf(" %cì—ì„œ ì›ë°˜ %dë¥¼(ì„) %cë¡œ ì˜®ê¹€ \n", start, n, target);
+	else
+	{
 		hanoi(n - 1, start, target, work);
-		printf(" %c¿¡¼­ ¿ø¹İ %d¸¦(À») %c·Î ¿Å±è \n", start, n, target);
+		printf(" %cì—ì„œ ì›ë°˜ %dë¥¼(ì„) %cë¡œ ì˜®ê¹€ \n", start, n, target);
 		hanoi(n - 1, work, start, target);
 	}
 }

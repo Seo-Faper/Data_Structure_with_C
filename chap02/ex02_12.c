@@ -16,7 +16,12 @@ void main()
 		{"이한영", 2023, 3300},
 		{"이상원", 2023, 3500},
 		{"이상범", 2024, 2900}};
-
+	int q = printf("0\n");
+	printf("q = %d\n", q);
+	if (printf("\0"))
+		printf("true");
+	else
+		printf("false");
 	for (i = 0; i < 4; i++)
 	{
 		printf("\n 이름 : %s", Lee[i].name);
