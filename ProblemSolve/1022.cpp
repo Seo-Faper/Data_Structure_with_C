@@ -56,6 +56,10 @@ R = 3
                 3) 1의 경우 예외처리, 그 외에는 2*n 만큼 반복해서 인덱스에 값 넣기
                 4) 범위를 구해야 하는 좌표를 0,0을 기준으로 치환 후 반복 출력
 
+
+    이렇게 풀면 메모리 초과가 난다.
+     |r1 - r2| x |c1 - c2| 크기에서 끝내야 한다 .
+
 */
 
 int r1, c1, r2, c2, R, METRIX[5000][5000];
@@ -76,8 +80,13 @@ void showMetrix(int x, int y, int r, int c)
         cout << endl;
     }
 }
+int g(int val)
+{
+    return val ? g(val / 10) + 1 : 0;
+}
 int main()
 {
+
     cin >> r1 >> c1 >> r2 >> c2;
 
     R = max(abs(r1), abs(c1));
