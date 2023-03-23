@@ -1,13 +1,14 @@
 #include <stdio.h>
 
-void main() {
+void main()
+{
 	int i;
-	char *ptrArray[4] = { { "Korea" },{ "Seoul" },{ "Mapo" },{ "152¹øÁö 2 / 3" } };
+	char *ptrArray[4] = {{"Korea"}, {"Seoul"}, {"Mapo"}, {"152ë²ˆì§€ 2 / 3"}};
 	for (i = 0; i < 4; i++)
 		printf("\n %s", ptrArray[i]);
 
 	// ptrArray[2] = "Jongno";
-	ptrArray[2]="J";
+	ptrArray[2] = "J";
 	printf("\n\n");
 	for (i = 0; i < 4; i++)
 		printf("\n %s", ptrArray[i]);

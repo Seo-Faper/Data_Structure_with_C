@@ -2,22 +2,24 @@
 #include <stdio.h>
 #include <string.h>
 
-struct employee {
+struct employee
+{
 	char name[10];
 	int year;
 	int pay;
 };
 
-void main() {
+void main()
+{
 	struct employee Lee;
-	struct employee* Sptr = &Lee;
-	strcpy(Sptr->name, "ÀÌ¼ø½Å");
+	struct employee *Sptr = &Lee;
+	strcpy(Sptr->name, "ì´ìˆœì‹ ");
 	Sptr->year = 2023;
 	Sptr->pay = 5900;
 
-	printf("\n ÀÌ¸§ : %s", Sptr->name);
-	printf("\n ÀÔ»ç : %d", Sptr->year);
-	printf("\n ¿¬ºÀ : %d", Sptr->pay);
+	printf("\n ì´ë¦„ : %s", Sptr->name);
+	printf("\n ìž…ì‚¬ : %d", Sptr->year);
+	printf("\n ì—°ë´‰ : %d", Sptr->pay);
 
 	getchar();
 }

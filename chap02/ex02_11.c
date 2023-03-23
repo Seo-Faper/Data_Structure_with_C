@@ -1,29 +1,30 @@
 #include <stdio.h>
 
-void main() {
-	char* ptrArray[2];
-	char** ptrptr;
+void main()
+{
+	char *ptrArray[2];
+	char **ptrptr;
 	int i;
 
 	ptrArray[0] = "Korea";
 	ptrArray[1] = "Seoul";
 
 	ptrptr = ptrArray;
-	printf("\n ptrArray[0]ÀÇ ÁÖ¼Ò (&ptrArray[0]) = %u", &ptrArray[0]);
-	printf("\n ptrArray[0]ÀÇ °ª (ptrArray[0]) = %u", ptrArray[0]);
-	printf("\n ptrArray[0]ÀÇ ÂüÁ¶°ª *ptrArray[0] = %c", *(ptrArray[0]+1));
-	printf("\n ptrArray[0]ÀÇ ÂüÁ¶¹®ÀÚ¿­ (*ptrArray[0]) = %s \n", *ptrArray);
+	printf("\n ptrArray[0]ì˜ ì£¼ì†Œ (&ptrArray[0]) = %u", &ptrArray[0]);
+	printf("\n ptrArray[0]ì˜ ê°’ (ptrArray[0]) = %u", ptrArray[0]);
+	printf("\n ptrArray[0]ì˜ ì°¸ì¡°ê°’ *ptrArray[0] = %c", *(ptrArray[0] + 1));
+	printf("\n ptrArray[0]ì˜ ì°¸ì¡°ë¬¸ìì—´ (*ptrArray[0]) = %s \n", *ptrArray);
 
-	printf("\n ptrArray[1]ÀÇ ÁÖ¼Ò (&ptrArray[1]) = %u", &ptrArray[1]);
-	printf("\n ptrArray[1]ÀÇ °ª (ptrArray[1]) = %u", ptrArray[1]);
-	printf("\n ptrArray[1]ÀÇ ÂüÁ¶°ª (*ptrArray[1]) = %c", *ptrArray[1]);
-	printf("\n ptrArray[1]ÀÇ ÂüÁ¶¹®ÀÚ¿­(*ptrArray[1])= %s \n", *(ptrArray + 1));
+	printf("\n ptrArray[1]ì˜ ì£¼ì†Œ (&ptrArray[1]) = %u", &ptrArray[1]);
+	printf("\n ptrArray[1]ì˜ ê°’ (ptrArray[1]) = %u", ptrArray[1]);
+	printf("\n ptrArray[1]ì˜ ì°¸ì¡°ê°’ (*ptrArray[1]) = %c", *ptrArray[1]);
+	printf("\n ptrArray[1]ì˜ ì°¸ì¡°ë¬¸ìì—´(*ptrArray[1])= %s \n", *(ptrArray + 1));
 
-	printf("\n ptrptrÀÇ ÁÖ¼Ò (&ptrptr) = %u", &ptrptr);
-	printf("\n ptrptrÀÇ °ª (ptrptr) = %u", ptrptr);
-	printf("\n ptrptrÀÇ 1Â÷ ÂüÁ¶°ª ( *ptrptr) = %u", *ptrptr);
-	printf("\n ptrptrÀÇ 2Â÷ ÂüÁ¶°ª (**ptrptr) = %c", **ptrptr);
-	printf("\n ptrptrÀÇ 2Â÷ ÂüÁ¶¹®ÀÚ¿­ (**ptrptr) = %s", *ptrptr);
+	printf("\n ptrptrì˜ ì£¼ì†Œ (&ptrptr) = %u", &ptrptr);
+	printf("\n ptrptrì˜ ê°’ (ptrptr) = %u", ptrptr);
+	printf("\n ptrptrì˜ 1ì°¨ ì°¸ì¡°ê°’ ( *ptrptr) = %u", *ptrptr);
+	printf("\n ptrptrì˜ 2ì°¨ ì°¸ì¡°ê°’ (**ptrptr) = %c", **ptrptr);
+	printf("\n ptrptrì˜ 2ì°¨ ì°¸ì¡°ë¬¸ìì—´ (**ptrptr) = %s", *ptrptr);
 
 	printf("\n\n *ptrArray[0] : ");
 	for (i = 0; i < 5; i++)
