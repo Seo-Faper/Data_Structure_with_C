@@ -59,6 +59,10 @@ R = 3
 
     이렇게 풀면 메모리 초과가 난다.
      |r1 - r2| x |c1 - c2| 크기에서 끝내야 한다 .
+    -2,-3 1,1
+
+    -2 ~ 1 (행) 38, 17, 16, 15, 14
+    -3 ~ 1(열)
 
 */
 
@@ -80,10 +84,7 @@ void showMetrix(int x, int y, int r, int c)
         cout << endl;
     }
 }
-int g(int val)
-{
-    return val ? g(val / 10) + 1 : 0;
-}
+
 int main()
 {
 

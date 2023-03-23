@@ -3,7 +3,7 @@
 void hanoi(int n, int start, int work, int target);
 void main()
 {
-	hanoi(3, 'A', 'B', 'C');
+	hanoi(5, 'A', 'B', 'C');
 	getchar();
 }
 
