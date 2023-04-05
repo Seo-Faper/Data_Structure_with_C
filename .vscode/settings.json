@@ -17,6 +17,8 @@
     "map": "cpp",
     "stack": "cpp",
     "string_view": "cpp",
-    "algorithm": "cpp"
+    "algorithm": "cpp",
+    "queue": "cpp",
+    "ios": "cpp"
   }
 }
