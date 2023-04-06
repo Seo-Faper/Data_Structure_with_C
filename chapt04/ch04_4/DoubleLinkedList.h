@@ -1,5 +1,5 @@
 #pragma once
-// ���� ���� ����Ʈ�� ��� ������ ����ü�� ����
+
 typedef struct ListNode
 {
 	struct ListNode *llink;
