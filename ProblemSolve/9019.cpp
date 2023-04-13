@@ -63,7 +63,7 @@ void solution()
 int main()
 {
     cin >> T;
-    while (T--)
+    for (int i = 0; i < T; i++)
     {
         cin >> A >> B;
         memset(V, false, sizeof(V)); // 초기화
