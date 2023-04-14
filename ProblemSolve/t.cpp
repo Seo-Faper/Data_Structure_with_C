@@ -4,7 +4,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    cout << (int)pow(5, 7) % 33 << endl;
+    cout << ((int)pow(2, 3) + 67) % 8 << endl;
 
     return 0;
 }
