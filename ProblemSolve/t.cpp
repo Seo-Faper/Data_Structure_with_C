@@ -1,10 +1,18 @@
 #include <iostream>
 #include <cmath>
+#include <stack>
+#include <string>
 using namespace std;
 
-int main(int argc, char const *argv[])
+int main()
 {
-    cout << ((int)pow(2, 3) + 67) % 8 << endl;
+    string s;
+    stack<string> v;
+    cin >> s;
+    for (int i = s.size() - 1; i >= 0; i--)
+    {
+        cout << s[i] << endl;
+    }
 
     return 0;
 }
