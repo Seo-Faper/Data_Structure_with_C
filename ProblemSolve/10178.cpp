@@ -8,7 +8,7 @@ int main()
     {
         int a, b;
         cin >> a >> b;
-        printf("You get %d piece(s) and your dad gets 1 piece(%d).\n", a / b, a % b);
+        printf("You get %d piece(s) and your dad gets %d piece(s).\n", a / b, a % b);
     }
     return 0;
 }

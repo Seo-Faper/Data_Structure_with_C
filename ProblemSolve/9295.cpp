@@ -1,14 +1,16 @@
 #include <iostream>
 using namespace std;
-int T;
 int main()
 {
+    int T;
     cin >> T;
+    int i = 1;
     while (T--)
     {
         int a, b;
         cin >> a >> b;
-        printf("You get %d piece(s) and your dad gets 1 piece(%d).\n", a / b, a % b);
+        printf("Case %d: %d\n", i, a + b);
+        i++;
     }
     return 0;
 }
