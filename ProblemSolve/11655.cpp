@@ -1,10 +1,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
-int main()
+void key(string k, int i)
 {
-    string k;
-    getline(cin, k);
     for (int i = 0; i < k.length(); i++)
     {
         char c = k[i];
@@ -33,5 +31,11 @@ int main()
         k[i] = c;
     }
     cout << k << endl;
+}
+int main()
+{
+    string k;
+    getline(cin, k);
+    key(k, 13);
     return 0;
 }
