@@ -25,19 +25,11 @@ int main()
     while (!pq.empty())
     {
         P t = pq.top();
-        // cout << -1 * t.first << "," << -1 * t.second << " : " << start << "," << end << endl;
         start = -1 * t.first;
         end = -1 * t.second;
-
-        if (start < -1 * q.top())
-        {
-            q.push(-1 * end);
-        }
-        else
-        {
-            q.push(-1 * end);
+        if (start >= -1 * q.top())
             q.pop();
-        }
+        q.push(-1 * end);
         pq.pop();
     }
     cout << q.size() << endl;
