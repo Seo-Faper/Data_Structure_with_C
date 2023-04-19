@@ -2,7 +2,6 @@
 #include <algorithm>
 #include <queue>
 #define P pair<long, long>
-#define G greater<int>
 using namespace std;
 int N;
 
