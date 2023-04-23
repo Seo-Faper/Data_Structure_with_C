@@ -6,10 +6,9 @@ using namespace std;
 int a, b;
 bool prime[MAX + 1];
 
-int isUnderPrime(int x)
+int isUnderPrime(int num)
 {
     int count = 0;
-    int num = x;
     for (int i = 2; i <= num; i++)
     {
         if (prime[i] && num % i == 0)
