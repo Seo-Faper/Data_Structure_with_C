@@ -2,30 +2,44 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#define P pair<int, string>
+#include <cmath>
+
 using namespace std;
 int N;
 int value[10];
+string s[10];
 int main()
 {
     cin >> N;
-    vector<P> v;
+
     for (int i = 0; i < N; i++)
     {
         string k;
+        string p = "";
         cin >> k;
-        v.push_back(make_pair(k.size(), k));
-    }
-    sort(v.begin(), v.end());
-    for (int i = N - 1; i >= 0; i--)
-    {
-        string s = v[i].second;
-        for (int j = 0; j < s.size(); j++)
+        for (int j = 0; j < 10 - k.size(); j++)
         {
-            if (value[s[j] - 'A'] == 0)
-            {
-                        }
+            p += " ";
         }
+        s[i] = p + k;
     }
+
+    int ans = 0;
+    int ctr = 9;
+    for (int j = 0; j < 10; j++)
+    {
+        int num = 0;
+        for (int i = 0; i < N; i++)
+        {
+            if (s[i][j] != ' ' && value[s[i][j] - 'A'] == 0)
+            {
+                value[s[i][j] - 'A'] = ctr;
+                ctr--;
+            }
+            num += pow(10, 9 - j) * value[s[i][j] - 'A'];
+        }
+        ans += num;
+    }
+    cout << ans << endl;
     return 0;
 }
