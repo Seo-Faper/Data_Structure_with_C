@@ -43,15 +43,10 @@ int main()
             mid = minHeap.top();
             cout << mid << "\n";
         }
-        if (minHeap.size() < maxHeap.size())
+        else
         {
             mid = maxHeap.top();
             cout << mid << "\n";
-        }
-        if (minHeap.size() == maxHeap.size())
-        {
-            cout << maxHeap.top() << "\n";
-            mid = (minHeap.top() + maxHeap.top()) / 2;
         }
     }
 
