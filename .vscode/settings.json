@@ -65,6 +65,8 @@
     "streambuf": "cpp",
     "system_error": "cpp",
     "type_traits": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "__verbose_abort": "cpp",
+    "bit": "cpp"
   }
 }

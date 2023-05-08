@@ -7,11 +7,11 @@
 using namespace std;
 int N;
 int value[10];
-string s[10];
+
 int main()
 {
     cin >> N;
-
+    vector<string> s;
     for (int i = 0; i < N; i++)
     {
         string k;
@@ -21,9 +21,9 @@ int main()
         {
             p += " ";
         }
-        s[i] = p + k;
+        s.push_back(p + k);
     }
-
+    sort(s.begin(), s.end(), greater<string>());
     int ans = 0;
     int ctr = 9;
     for (int j = 0; j < 10; j++)
@@ -36,6 +36,8 @@ int main()
                 value[s[i][j] - 'A'] = ctr;
                 ctr--;
             }
+            //  cout << "!" << s[i][j] << endl;
+            cout << pow(10, 9 - j) * value[s[i][j] - 'A'] << endl;
             num += pow(10, 9 - j) * value[s[i][j] - 'A'];
         }
         ans += num;
