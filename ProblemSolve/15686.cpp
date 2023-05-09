@@ -10,7 +10,6 @@ using namespace std;
 /*
 1. L 개의 치킨 가게 중 M 개를 선택하는 조합을 만든다. M개의 모든 경우의 수가 나온다.
 2. 해당 조합의 치킨거리 값을 계산해 최소를 찾는다.
-
 */
 
 int N, M, Chicken_Num, Answer;
