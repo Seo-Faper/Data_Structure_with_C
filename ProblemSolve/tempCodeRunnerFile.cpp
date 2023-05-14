@@ -1,1 +1,2 @@
-value[s[i][j] - 'A']
+
+        int n;
