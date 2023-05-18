@@ -129,24 +129,87 @@ int main()
         }
         arr.push_back(vec);
     }
+    vector<V> P1;
+    vector<V> P2;
+    vector<V> P3;
+    vector<V> P4;
+    vector<V> small = {{1, 2}, {3, 4}};
+    for (int i = 0; i < N; i++)
+    {
+        vector<int> temp1;
+        vector<int> temp2;
+        vector<int> temp3;
+        vector<int> temp4;
+        for (int j = 0; j < M; j++)
+        {
+            if (j < M / 2 && i < N / 2)
+            {
+                temp1.push_back(arr[i][j]);
+            }
+            if (j >= M / 2 && i < N / 2)
+            {
+                temp2.push_back(arr[i][j]);
+            }
+            if (j >= M / 2 && i >= N / 2)
+            {
+                temp3.push_back(arr[i][j]);
+            }
+            if (j < M / 2 && i >= N / 2)
+            {
+                temp4.push_back(arr[i][j]);
+            }
+        }
+        P1.push_back(temp1);
+        P2.push_back(temp2);
+        P3.push_back(temp3);
+        P4.push_back(temp4);
+    }
+
     for (int i = 0; i < R; i++)
     {
         int a;
         cin >> a;
         if (a == 1)
-            operation1(arr);
+            operation1(small);
         else if (a == 2)
-            operation2(arr);
+            operation2(small);
         else if (a == 3)
-            operation3(arr);
+            operation3(small);
         else if (a == 4)
-            operation4(arr);
+            operation4(small);
         else if (a == 5)
-            operation5(arr);
+            operation5(small);
         else
-            operation6(arr);
+            operation6(small);
     }
-    printArray(arr);
-
+    vector<V> L[4];
+    int cnt = 0;
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            int idx = small[i][j];
+            if (idx == 1)
+            {
+                L[cnt] = P1;
+            }
+            else if (idx == 2)
+            {
+                L[cnt] = P2;
+            }
+            else if (idx == 3)
+            {
+                L[cnt] = P3;
+            }
+            else
+            {
+                L[cnt] = P4;
+            }
+            cnt++;
+        }
+    }
+    for (int i = 0; i < L[0].size() + L[1].size(); i++)
+    {
+        }
     return 0;
 }
