@@ -3,17 +3,17 @@
 
 using namespace std;
 
-int countVacationDates(const vector<int> &temperatures, int k, int q)
+long long solve(const vector<long long> &temp, int k, int q)
 {
-    int count = 0;
-    int consecutive = 0;
-    int sum = 0;
-    for (int i = 0; i < temperatures.size(); i++)
+    long long count = 0;
+    long long e = 0;
+    long long sum = 0;
+    for (int i = 0; i < temp.size(); i++)
     {
-        if (temperatures[i] <= q)
+        if (temp[i] <= q)
         {
-            consecutive++;
-            if (consecutive >= k)
+            e++;
+            if (e >= k)
             {
                 count++;
                 sum += count;
@@ -21,9 +21,8 @@ int countVacationDates(const vector<int> &temperatures, int k, int q)
         }
         else
         {
-            cout << count << endl;
             count = 0;
-            consecutive = 0;
+            e = 0;
         }
     }
 
@@ -40,13 +39,13 @@ int main()
         int n, k, q;
         cin >> n >> k >> q;
 
-        vector<int> temperatures(n);
+        vector<long long> temp(n);
         for (int i = 0; i < n; i++)
         {
-            cin >> temperatures[i];
+            cin >> temp[i];
         }
 
-        int result = countVacationDates(temperatures, k, q);
+        long long result = solve(temp, k, q);
         cout << result << endl;
     }
 
