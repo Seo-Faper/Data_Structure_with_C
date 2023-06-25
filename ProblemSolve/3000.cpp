@@ -23,6 +23,7 @@ int main()
             {
                 if (pos[i].first == pos[j].first && pos[i].second == pos[k].second)
                 {
+                    
                     ans++;
                 }
             }

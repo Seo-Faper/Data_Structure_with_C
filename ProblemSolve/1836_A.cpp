@@ -31,7 +31,7 @@ int main()
         }
         else
         {
-            cout << "NO"
+            cout << "NO!"
                  << "\n";
         }
         for (int i = 0; i < 100; i++)
