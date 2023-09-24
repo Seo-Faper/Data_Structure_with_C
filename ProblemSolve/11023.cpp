@@ -19,5 +19,6 @@ int main()
     }
     ans += stoi(num);
     cout << ans << endl;
+
     return 0;
 }
